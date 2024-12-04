@@ -37,7 +37,7 @@ describe("template spec", () => {
       `SELECT * FROM Students WHERE StudentGroup="02-2022"`
     ).then((result) => {
       cy.log(JSON.stringify(result));
-      expect(result.length).to.equal(3);
+      expect(result.length).to.equal(2);
     });
   });
 

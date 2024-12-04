@@ -4,9 +4,10 @@ module.exports = defineConfig({
   env: {
     db: {
       host: "sql10.freesqldatabase.com",
-      database: "sql10745805",
-      email: "polalextest@gamil.com",
-      password: "test1234",
+      user: "sql10749772",
+      password: "6BzzLJPDtF",
+      database: "sql10749772",
+      port: 3306,
     },
   },
   e2e: {
@@ -23,9 +24,10 @@ const mysql = require("mysql");
 function queryTestDb(query, config) {
   const connection = mysql.createConnection({
     host: config.env.db.host,
-    email: config.env.db.email,
+    user: config.env.db.user,
     password: config.env.db.password,
     database: config.env.db.database,
+    port: config.env.db.port,
   });
   connection.connect();
   return new Promise((resolve, reject) => {
